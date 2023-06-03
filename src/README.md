@@ -44,11 +44,31 @@ Here, we will focus on creating the burn function.
 4. Send a token to the Evaluator contract or use the previous exercise to mint a new token.
 5. Call `ex_03_erc721_burn()` to verify the `burn()` function within your contract and receive points.
 
-### Exercise 4 - Transfering a token
+### Exercise 4 - Approving a token
+
+This time, our job is to create the '`approve()` function, which can then be used to give permission to a specific contract address to interact with a specific NFT.
+
+1. Create the `approve()` function.
+2. Create the `get_approved()` function.
+3. Deploy your contract on testnet.
+4. Call `submit_exercise()` in the evaluator to configure the contract you want to be evaluated.
+5. Call `ex_04_erc721_approve()` to verify your contract and receive points.
+
+### Exercise 5 - Set Approval for all
+
+Here we will create the `set_approval_for_all()` function, which can then be used to give permission to a specific contract address to have full permission over our NFT contract.
+
+1. Create the `set_approval_for_all()` function.
+2. Create the `is_approved_for_all()` function.
+3. Deploy your contract on testnet.
+4. Call `submit_exercise()` in the evaluator to configure the contract you want to be evaluated.
+5. Call `ex_05_erc721_approve_for_all()` to verify your contract and receive points.
+
+### Exercise 6 - Transfering a token
 
 Here, we will focus on creating the transfer function.
 
 1. Create the `transfer_from()` function that allows you to transfer the NFT.
 2. Deploy your contract on testnet
 3. Call `submit_exercise()` in the Evaluator to configure the contract you want to be evaluated.
-4. Call `ex_04_erc721_transfer()` to verify your contract and receive points.
+4. Call `ex_06_erc721_transfer()` to verify your contract and receive points.
