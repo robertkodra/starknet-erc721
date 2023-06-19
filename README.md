@@ -5,8 +5,8 @@ It is aimed at developers that:
 
 - Understand Cairo syntax
 - Understand the ERC721 token standard
-​
-​
+  ​
+  ​
 
 ## Introduction
 
@@ -78,7 +78,7 @@ cd starknet-erc721
 There are two ways to set up your environment on StarkNet: a local installation, or using a docker container
 
 - For Mac and Linux users, we recommend either
-- For windows users we recommend docker
+- For windows users we recommend Docker
 
 For a production setup instructions we wrote [this article](https://medium.com/starknet-edu/the-ultimate-starknet-dev-environment-716724aef4a7).
 
@@ -141,7 +141,7 @@ For example to solve the first exercise the workflow would be the following:
 **Your objective is to gather as many ERC721-101 points as possible.** Please note :
 
 - The 'transfer' function of ERC721-101 has been disabled to encourage you to finish the tutorial with only one address
-- In order to receive points, the evaluator has to reach the calls to the  `distribute_point` function.
+- In order to receive points, the evaluator has to reach the calls to the `distribute_point` function.
 - This repo contains an interface `IExerciseSolution.cairo`. Your ERC721 contract will have to conform to this interface in order to validate some exercises; that is, your contract needs to implement all the functions described in `IExerciseSolution.cairo`.
 - **We really recommend that your read the [`Evaluator.cairo`](contracts/Evaluator.cairo) contract in order to fully understand what's expected for each exercise**. A high level description of what is expected for each exercise is provided in this readme.
 - The Evaluator contract sometimes needs to make payments to buy your tokens. Make sure he has enough dummy tokens to do so! If not, you should get dummy tokens from the dummy tokens contract and send them to the evaluator
@@ -150,10 +150,10 @@ For example to solve the first exercise the workflow would be the following:
 
 | Contract code                                                        | Contract on voyager                                                                                                                                                           |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Points counter ERC20](contracts/token/ERC20/TDERC20.cairo)          | [0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707](https://goerli.voyager.online/contract/0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707) |
+| [Points counter ERC20](contracts/token/ERC20/TDERC20.cairo)          | [0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707](https://goerli.voyager.online/contract/0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707)   |
 | [Evaluator](contracts/Evaluator.cairo)                               | [0x2d15a378e131b0a9dc323d0eae882bfe8ecc59de0eb206266ca236f823e0a15](https://goerli.voyager.online/contract/0x2d15a378e131b0a9dc323d0eae882bfe8ecc59de0eb206266ca236f823e0a15) |
 | [Dummy ERC20 token](contracts/token/ERC20/dummy_token.cairo)         | [0x52ec5de9a76623f18e38c400f763013ff0b3ff8491431d7dc0391b3478bf1f3](https://goerli.voyager.online/contract/0x52ec5de9a76623f18e38c400f763013ff0b3ff8491431d7dc0391b3478bf1f3) |
-| [Dummy ERC721 token](contracts/token/ERC721/TDERC721_metadata.cairo) | [0x4fc25c4aca3a8126f9b386f8908ffb7518bc6fefaa5c542cd538655827f8a21](https://goerli.voyager.online/contract/0x4fc25c4aca3a8126f9b386f8908ffb7518bc6fefaa5c542cd538655827f8a21)   |
+| [Dummy ERC721 token](contracts/token/ERC721/TDERC721_metadata.cairo) | [0x4fc25c4aca3a8126f9b386f8908ffb7518bc6fefaa5c542cd538655827f8a21](https://goerli.voyager.online/contract/0x4fc25c4aca3a8126f9b386f8908ffb7518bc6fefaa5c542cd538655827f8a21) |
 
 ​
 ​
@@ -169,7 +169,7 @@ Today we are creating an animal registry! Animals are bred by breeders. They can
 
 ```bash
 starknet-compile contracts/ERC721/ERC721.cairo --output artifacts/ERC721.json
-starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --network alpha-goerli 
+starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --network alpha-goerli
 ```
 
 - Give token #1 to Evaluator contract
@@ -236,14 +236,14 @@ starknet deploy --contract artifacts/ERC721.json --inputs arg1 arg2 arg3 --netwo
 To convert data to felt use the [`utils.py`](utils.py) script
 To open Python in interactive mode after running script
 
-  ```bash
-  python -i utils.py
-  ```
+```bash
+python -i utils.py
+```
 
-  ```python
-  >>> str_to_felt('ERC20-101')
-  1278752977803006783537
-  ```
+```python
+>>> str_to_felt('ERC20-101')
+1278752977803006783537
+```
 
 ### Checking your progress & counting your points
 
@@ -251,7 +251,7 @@ To open Python in interactive mode after running script
 Your points will get credited in your wallet; though this may take some time. If you want to monitor your points count in real time, you can also see your balance in voyager!
 ​
 
-- Go to the  [ERC20 counter](https://goerli.voyager.online/contract/0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707#readContract)  in voyager, in the "read contract" tab
+- Go to the [ERC20 counter](https://goerli.voyager.online/contract/0xa0b943234522049dcdbd36cf9d5e12a46be405d6b8757df2329e6536b40707#readContract) in voyager, in the "read contract" tab
 - Enter your address in decimal in the "balanceOf" function
 
 You can also check your overall progress [here](https://starknet-tutorials.vercel.app)
@@ -265,8 +265,8 @@ You sent a transaction, and it is shown as "undetected" in voyager? This can mea
 
 - Your transaction is pending, and will be included in a block shortly. It will then be visible in voyager.
 - Your transaction was invalid, and will NOT be included in a block (there is no such thing as a failed transaction in StarkNet).
-​
-You can (and should) check the status of your transaction with the following URL  [https://alpha4.starknet.io/feeder_gateway/get_transaction_receipt?transactionHash=](https://alpha4.starknet.io/feeder_gateway/get_transaction_receipt?transactionHash=)  , where you can append your transaction hash.
-​
+  ​
+  You can (and should) check the status of your transaction with the following URL [https://alpha4.starknet.io/feeder_gateway/get_transaction_receipt?transactionHash=](https://alpha4.starknet.io/feeder_gateway/get_transaction_receipt?transactionHash=) , where you can append your transaction hash.
+  ​
 
 ​
